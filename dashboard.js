@@ -117,7 +117,6 @@ function mostrarLista() {
         ? "background: lightcoral;"
         : "";
 
-        // ✅ Si la tarea NO está pendiente, bloquea ambos
       let disabledCancelar = "";
       let disabledCompletar = "";
 
@@ -126,15 +125,14 @@ function mostrarLista() {
         disabledCompletar = "disabled";
       }
 
-
       html += `
         <tr style="${color}">
           <td style="padding:10px;"><strong>${t.fecha} ${t.hora}</strong>: ${t.tarea}</td>
           <td style="padding:10px;">
-            <button onclick="cancelarTarea(${index})" ${disabled}>Cancelar</button>
+            <button onclick="cancelarTarea(${index})" ${disabledCancelar}>Cancelar</button>
           </td>
           <td style="padding:10px;">
-            <button onclick="completarTarea(${index})" ${disabledComplete}>Completar</button>
+            <button onclick="completarTarea(${index})" ${disabledCompletar}>Completar</button>
           </td>
         </tr>
       `;
