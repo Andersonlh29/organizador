@@ -58,6 +58,9 @@ body {
 .login-body button:hover {
   background: #555;
 }
+.login-body button:last-child {
+  margin-bottom: 40px;
+}
 
 /* 🌟 SIDEBAR IZQUIERDO */
 .sidebar {
